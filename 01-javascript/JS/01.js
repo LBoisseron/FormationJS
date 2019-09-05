@@ -53,7 +53,7 @@ const user = 'root';
 const password = 'mysql';
 
 // A NE PAS FAIRE 
-// user = Lena;
+// user = Lena; ne pas changer la constante
 // Uncaught ReferenceError: Lena is not defined
 
 var unNombre = '24';
@@ -70,6 +70,12 @@ unNombre = '12.55';
 unNombre = parseFloat (unNombre);
 console.log(unNombre);
 console.log(typeof unNombre);
+
+// pour convertir un Int ou FLOAT en 'string'
+unNombre = 10;
+var unString = unNombre.toString();
+console.log(unString);
+console.log(typeof unString);
 
 /*
                     LA PORTEE DES VARIABLES
