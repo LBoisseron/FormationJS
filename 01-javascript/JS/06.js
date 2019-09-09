@@ -35,8 +35,8 @@ function ditBonjour (prenom , nom) {
         + '</strong> ! <br>'
     );
 }
-ditBonjour( 'Lena', 'BOISSERON');
-ditBonjour( 'Astrid', 'JONATHAN');
+//ditBonjour( 'Lena', 'BOISSERON');
+//ditBonjour( 'Astrid', 'JONATHAN');
 
 /**
  * EXERCICE :
@@ -121,14 +121,20 @@ Bonjour [PRENOM], tu as [AGE] !
   */ 
 
 
+console.clear()
 
-
-var prenom, age, NAISSANCE;
+var prenom, age, naissance;
 prenom = 'Léna';
 age = 40;
-NAISSANCE = getYear()+1;
 
-function accueil (prenom, age, NAISSANCE) {
-    console.log(accueil);
-    'Bonjour (prenom). Quel âge as-tu ? '
-}
+
+function accueil (prenom, age, naissance) {
+    alert('Bonjour
+    + prenom
+    + '.'
+    + 'Quel âge as-tu ? ');
+};
+
+
+
+console.log(accueil);
