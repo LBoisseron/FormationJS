@@ -108,3 +108,27 @@ console.log(montantTtc3);
         + montantUsd
         + '$'
  );
+
+ /**
+  * Votre mission, que vous devez accepter ! 
+Réaliser une fonction permettant à un internaute de : 
+- Saisir son Prénom dans un Prompt 
+- Retourner à l'Utilisateur : Bonjour [PRENOM], Quel age as-tu ? 
+- Saisir son Age 
+- Retourner à l'Utilisateur : Tu est donc né en [ANNEE DE NAISSANCE]. 
+- Afficher ensuite un récapitulatif dans la page. 
+Bonjour [PRENOM], tu as [AGE] ! 
+  */ 
+
+
+
+
+var prenom, age, NAISSANCE;
+prenom = 'Léna';
+age = 40;
+NAISSANCE = getYear()+1;
+
+function accueil (prenom, age, NAISSANCE) {
+    console.log(accueil);
+    'Bonjour (prenom). Quel âge as-tu ? '
+}
