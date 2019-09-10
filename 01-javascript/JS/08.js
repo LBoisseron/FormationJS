@@ -72,7 +72,7 @@ function utilMaj(age) {
 }
 
 // 2- demander à l'utilisateur son âge
-const ageSaisiParMonUtilisateur = parseInt(
+const ageSaisiParMonUtilisateur = parseInt( // on utilise CONST car il n'y a pas de réaffectation de valeur à la donnée ageSaisiParMonUtilisateur
     prompt("Bonjour, Quel âge avez-vous ?", "<Saisissez votre âge>")
 );
 
@@ -123,8 +123,8 @@ Si tous se passe bien, un message de bienvenue m'accueil.
 // // -- BASE DE DONNEES
 const email = "wf3@hl-media.fr";
 const mdp = "wf3";
-
-function connect () {
+/**
+ * function connect () {
     prompt("Identifiant"[email], '<Votre email>' );
     prompt("Mot de passe"[mdp], 'Votre mot de passe');
 }
@@ -145,6 +145,8 @@ function pasConnexion () {
     }
 }
 pasConnexion ();
+ */
+
 
 // CORRECTION
 
@@ -178,11 +180,43 @@ function connexion( emailUser, mdpUser ) {
         return false;
     }
 }
-
-if ( connexion( emailPrompt, mdpPrompt ) ) {
+if ( connexion( emailPrompt, mdpPrompt ) ) { // JE PEUX APPELER LA FONCTION DANS LA CONDITION !!!
     alert("Bienvenue " + emailPrompt + " !");
 } else {
     alert("ATTENTION, email / mdp incorrect.");
 }
 
-
+         /* -------------------------------------------|   |------------- *\
+        /                                              |   |                \
+       /           ~         LES OPERATEURS LOGIQUES          ~              \
+      /_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\
+        |                                                                   |
+        |   # L'Opérateur ET : &&. Si la combinaison email et emailUser     |
+        |   correspond, ET la combinaison mdp et mdpUser correspond.        |
+        |                                                                   |
+        |   --> Dans cette condition, les 2 doivent OBLIGATOIREMENT         |
+        |   correspondre pour être validée.                                 |   
+        |   Ex. if(emailUser === email && mdpUser === mdp) { ... }          |
+        |                                                                   |
+        |   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+        |                                                                   |
+        |   # L'Opérateur OU : ||. Si la combinaison email et emailUser     |
+        |   correspond, ET / OU la combinaison mdp et mdpUser correspond.   |
+        |                                                                   |
+        |   --> Dans cette condition, au moins l'une des deux doit          |
+        |   correspondre pour être validée.                                 |
+        |   Ex. if(emailUser === email || mdpUser === mdp) { ... }          |
+        |                                                                   |
+        |   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+        |                                                                   |
+        |   # L'Opérateur " ! " ou encore NOT.                              |
+        |   Il signifie le CONTRAIRE DE, DIFFERENT DE                       |
+        |                                                                   |
+        |   var monUtilisateurEstApprouve = true;                           |
+        |   if ( !monUtilisateurEstApprouve ) { ... }                       |
+        |   Si mon utilisateur n'est pas approuvé                           |
+        |                                                                   |
+        |  Revient à écrire                                                 |
+        |  if ( monUtilisateurEstApprouve === false ) { ... }               |
+        |                                                                   |
+        \*_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _*/
