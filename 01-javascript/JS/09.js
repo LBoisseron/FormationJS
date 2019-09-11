@@ -147,3 +147,43 @@ console.log(month);
 const months = [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ];
 console.log(months[month]);
 alert(months[month]);
+
+
+//________________________________________________
+
+/* -- 
+CONSIGNE : 
+
+A partir du tableau "baseDeDonnees" fourni, vous devez mettre en place un système d'authentification. 
+Après avoir demandé à votre utilisateur son EMAIL et MOT DE PASSE, 
+et après avoir vérifié ses informations, vous lui souhaiterez la bienvenue 
+avec son nom et prénom (document.write); 
+
+En cas d'échec, vous afficherez une ALERT pour l'informer de l'erreur. 
+-- */ 
+
+const baseDeDonnees = [ 
+    {'prenom':'Hugo','nom':'LIEGEARD','email':'wf3@hl-media.fr','mdp':'wf3'}, 
+    {'prenom':'Rodrigue','nom':'NOUEL','email':'rodrigue@hl-media.fr','mdp':'wf3'}, 
+    {'prenom':'Nathanael','nom':'ORDONNE','email':'nathanael.d@hl-media.fr','mdp':'wf3'} 
+    ];
+
+// --1. demander email et mdp à l'utilisateur
+const prenomUser = prompt("Quel est votre prénom ?", "<Saisissez votre prénom>");
+const nomUser = prompt("Quel est votre nom ?", "<Saisissez votre nom>");
+const emailUser = prompt("Quel est votre e-mail ?", "<Saisissez votre email>");
+const mdpUser = prompt("Quel est votre mdp ?", "<Saisissez votre mot de passe>");
+
+
+// --2. vérifier que email et mdp saisis par l'utilisateur correspondent à la BDD
+if (prenomUser && nomUser && emailUser && mdpUser === baseDeDonnees) {
+
+// --3. si ok, lui souhaiter la bienvenue
+document.write('Bienvenue' + ' ' + prenomUser + ' ' + nomUser)
+
+// --4. si échec, envoyer message d'erreur
+
+} else {
+    alert('ATTENTION ! Vos données sont incorrectes.')
+}
+
